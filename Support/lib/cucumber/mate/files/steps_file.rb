@@ -123,6 +123,10 @@ module Cucumber
         
         def at_exit
         end
+        
+        %w[capture_model capture_fields capture_plural_factory capture_predicate capture_value].each do |method|
+          define_method(method) {}
+        end
       end
 
     end
